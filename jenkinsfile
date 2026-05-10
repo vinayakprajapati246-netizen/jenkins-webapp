@@ -3,7 +3,7 @@ pipeline {
 
     stages {
 
-        stage('Pre Build Actions') {
+        stage('Pre Build Actions'){
             steps {
                 sh 'npm install'
                 sh 'sudo systemctl status nginx || sudo apt install nginx -y'
@@ -11,13 +11,13 @@ pipeline {
             }
         }
 
-        stage('Build') {
+        stage('Build'){
             steps {
                 sh 'npm run build'
             }
         }
 
-        stage('Post Build Actions') {
+        stage('Post Build Actions'){
             steps {
                 echo 'Build Completed Successfully'
                 sh 'sudo cp -r dist/* /var/www/html/'
