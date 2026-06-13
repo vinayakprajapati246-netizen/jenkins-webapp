@@ -1,7 +1,7 @@
 
 
 pipeline{
-    agennt any
+    agent any
     environment{
         IMAGE_NAME = "vinayakprajapati123/frontend-app"
         IMAGE_TAG = "${BUILD_NUMBER}"
